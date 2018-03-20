@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Праздник</title>
+	 <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.4/css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="index.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.4/js/materialize.min.js"></script>
+    <script src="http://knockoutjs.com/downloads/knockout-3.4.2.js"></script>
+    <script src="pager.js"></script>
+    <script src="history.js"></script>
+    <script src="history.adapter.native.js"></script>
+	<script src="http://vk.com/js/api/openapi.js"></script> 
+    <script src="index.js"></script>
+
+</head>
+<body style="background-color: #fafafa">
+	<div style="background-color: rgba(255,200,0,0.7); position: relative;" class="navb">
+		<div class="row">
+			<div class="herb"></div>
+			<div class="col s6 right-align">
+			</div>
+			<div class="col s6" style="color: white;">
+				<h4>Профессиональное проведение и организация детских праздников в Екатеринбурге</h4>
+				<div class="right-align">
+					<h5>Режим рабты: 10:00 - 21:00</h5>
+					<h5>г.Екатеринбург, ул.Комсомольская 39</h5>
+					<h5>+7 922 221 9334</h5>
+					<h5>+7 953 143 6091</h5>
+				</div>
+			</div>
+		</div>	
+		<div style="opacity: 0.2;" class="navbi">	
+		</div>
+	</div>
+	<div class="row" style="margin-bottom: 70px;">
+		<div class="col s4">
+			
+		</div>
+		<div class="col s8">
+			  <nav>
+			    <div class="nav-wrapper" style="background-color: rgba(255,200,0,1);">
+		    		<a data-bind="click: function() {
+			        	pager.navigate('main')
+			        }" class="brand-logo" style="margin-left: 20px; cursor: pointer;">Главная</a>
+			      <ul id="nav-mobile" class="right">
+			        <li><a data-bind="click: function() {
+			        	pager.navigate('show')
+			        }">Шоу-программы</a></li>
+			        <li><a data-bind="click: function() {
+			        	pager.navigate('studio')
+			        }">Студия</a></li>
+			        <li><a data-bind="click: function() {
+			        	pager.navigate('animators')
+			        }">Аниматоры</a></li>
+			        <li><a data-bind="click: function() {
+			        	pager.navigate('services')
+			        }">Услуги</a></li>
+			        <li><a data-bind="click: function() {
+			        	pager.navigate('prices')
+			        }">Цены</a></li>
+			        <li><a data-bind="click: function() {
+			        	pager.navigate('contacts')
+			        }">Контакты</a></li>
+			      </ul>
+			    </div>
+			  </nav>
+		</div>
+	</div>
+    <div data-bind="page: {
+        id: 'main',
+        source: 'pages/Main.html',
+        role: 'start'
+    }"></div>
+    <div data-bind="page: {
+        id: 'show',
+        source: 'pages/Show.html',
+    }"></div>
+    <div data-bind="page: {
+        id: 'studio',
+        source: 'pages/Studio.html',
+    }"></div>
+    <div data-bind="page: {
+        id: 'animators',
+        source: 'pages/Animators.html',
+    }"></div>
+    <div data-bind="page: {
+        id: 'services',
+        source: 'pages/Services.html',
+    }"></div>
+    <div data-bind="page: {
+        id: 'prices',
+        source: 'pages/Prices.html',
+    }"></div>
+    <div data-bind="page: {
+        id: 'contacts',
+        source: 'pages/Contacts.html',
+    }"></div>
+</body>
+</html>
